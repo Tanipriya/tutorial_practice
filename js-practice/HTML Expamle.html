@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toLowerCase();
+}
+
+function checkAge(){
+var age= document.getElementById("age").value;
+if(age<18){
+alert('Sorry you are not eligible');
+}else{
+alert('Hurray you are eligible');
+}
+}
+
+function checkGender(){
+var gender = document.getElementById("gender").value;
+if(gender.toLowerCase()=='male'){
+alert('You are male')
+}else if(gender.toLowerCase()=='female'){
+alert('You are female')
+}else{
+alert('other')}
+}
+</script>
+</head>
+<body>
+
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+Enter your age: <input type="text" id="age" onchange="checkAge()">
+Enter your gender: <input type="text" id="gender" onchange="checkGender()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+</body>
+</html>
